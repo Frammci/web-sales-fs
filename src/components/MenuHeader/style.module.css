@@ -1,0 +1,9 @@
+.containerTop {
+  border: 3px solid #c9c3eb;
+  height: 50px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
