@@ -5,9 +5,11 @@ const DisplayDetail = (props) => {
   return (
     <> 
     {props.id
-        ? <><div className={s.container}>
-          <img src={data.urlImg} />
-        </div>
+        ? 
+        <>
+          <div className={s.container}>
+            <img src={data.urlImg} />
+          </div>
           <div className={s.container}>
             <div>
               <h5 style={{ textAlign: "center" }}>{data.product}</h5>
@@ -20,9 +22,11 @@ const DisplayDetail = (props) => {
             <div className={s.price}>
               <span>{data.price}</span>
             </div>
-          </div></>
-        : "Selecciona un producto"}
-    
+          </div>
+        </>
+        : 
+          "Selecciona un producto"
+      }
     </>
   );
 };

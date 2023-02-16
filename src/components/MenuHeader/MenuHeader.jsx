@@ -1,15 +1,18 @@
 import ItemList from "../itemList/ItemList";
-import { PRODUCTS } from "./constant";
+import { PRODUCTS } from "../../data/constant";
 import s from "./style.module.css";
 
 const MenuHeader = (props) => {
+  
+  const { id, onItemClick } = props;
+
   return (
     <div className={s.containerTop}>
       {PRODUCTS.map((product) => (
         <ItemList
           key={product.id}
-          isSelected={props.id === product.id}
-          onClick={props.onItemClick}
+          isSelected={id === product.id}
+          onClick={onItemClick}
           id={product.id}
           product={product}
         />

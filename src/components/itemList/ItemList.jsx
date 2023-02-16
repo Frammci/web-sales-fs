@@ -2,7 +2,9 @@ import { useState } from "react";
 import s from "./style.module.css";
 
 const ItemList = (props) => {
-  const { product } = props;
+
+  const { id, product, onClick } = props;
+
   const [isHovered, setIsHover] = useState(false);
 
   const activate = () => {
@@ -26,11 +28,11 @@ const ItemList = (props) => {
   };
 
   const onItemClick = () => {
-    props.onClick(props.id, product);
+    onClick(id, product);
   };
 
   return (
-    <div
+    <button
       className={s.container}
       onClick={onItemClick}
       onMouseEnter={activate}
@@ -38,7 +40,7 @@ const ItemList = (props) => {
       style={{ backgroundColor: getBackgroundColor() }}
     >
       TOP {props.id}
-    </div>
+    </button>
   );
 };
 

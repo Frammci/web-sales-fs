@@ -7,7 +7,7 @@ function App() {
   const [product, setProduct] = useState("");
   const [data, setData] = useState([]);
 
-  const onMenuListItemClick = (id, data) => {
+  const itemListClick = (id, data) => {
     setProduct(id);
     setData(data);
   };
@@ -20,7 +20,7 @@ function App() {
       <div className={s.workspace1}>
         <MenuHeader
           id={product}
-          onItemClick={onMenuListItemClick}
+          onItemClick={itemListClick}
         />
       </div>
       <div className={s.workspace2}>
